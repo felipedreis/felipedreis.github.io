@@ -4,7 +4,7 @@ title: Publications
 permalink: /publications/
 ---
 <div class="container pt-5">
-    <div class="d-flex flex-wrap"> 
+    <div class="d-flex justify-content-center flex-wrap"> 
         {% for paper in site.data.publications %}
             <div class="m-3">
                 <div class="card" style="width: 350px; min-height: 550px;"> 
@@ -12,25 +12,141 @@ permalink: /publications/
                     <img src="{{ paper.thumbnail | absolute_url }}" class="card-img-top"/>
                     <div class="card-body">
                         <h5 class="card-title">{{ paper.title }}</h5>
-                        <p class="card-text fw-light"> <a href="#" class="plain-text"> {{ paper.abstract | truncatewords: 15 }} </a> </p>
+                        <p class="card-text fw-light">
+                             <a href="#" class="plain-text" data-bs-toggle="modal" 
+                                data-bs-title="{{ paper.title }}"
+                                data-bs-abstract="{{ paper.abstract }}" 
+                                data-bs-doi="{{ paper.doi }}" 
+                                data-bs-authors="{{ paper.authors | array_to_sentence_string }}"
+                                data-bs-target="#details"> 
+                                {{ paper.abstract | truncatewords: 15 }} 
+                            </a> 
+                        </p>
                         <a href="{{ paper.file | absolute_url }}" class="btn btn-dark">Download</a>
-                        <a href="#" class="btn btn-light">Bibtex</a>
+                        <a href="#" data-bs-toggle="modal"
+                            data-bs-bibtex="{{ paper.bibtex }}"
+                            data-bs-target="#bibtex" 
+                            class="btn btn-light">Bibtex</a>
                     </div>
                 </div>
             </div>
-            <!--div>
-                <div>
-                    <p>
-                        {{ paper.abstract }}
-                    </p>
-                </div>
-                <div>
-                    <p>{{ paper.doi }}</p>
-                </div>
-                <div>
-                    {{ paper.authors | array_to_sentence_string }}
-                </div>
-            </div-->
         {% endfor %}
     </div>
 </div>
+
+<div id="bibtex" class="modal" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Bibtex</h5>
+                <a id="bibtexCopy" href="#" class="btn-light bi bi-clipboard">
+                </a>
+            </div>
+            <div class="modal-body text-start">
+                <pre>
+
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="details" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <p class="text=end">Abstract: </p>
+                        </div>
+                        <div class="col-10">
+                            <em>
+                                <p id="abstract" class="text-justify">
+
+                                </p>
+                            </em>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <p class="text-end">Authors: </p>
+                        </div>
+                        <div class="col-10">
+                            <em>
+                                <p id="authors" class="text-start">
+
+                                </p>
+                            </em>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <p class="text-end">DOI: </p>
+                        </div>
+                        <div class="col-10">
+                            <em>
+                                <p id="doi" class="text-start">
+                                    <a href="#"></a>
+                                </p>
+                            </em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const detailsModal = document.getElementById('details')
+const bibtexModal = document.getElementById('bibtex')
+const bibtexCopy = document.getElementById('bibtexCopy')
+
+if (detailsModal) {
+  detailsModal.addEventListener('show.bs.modal', event => {
+    const button = event.relatedTarget
+    const title = button.getAttribute("data-bs-title")
+    const abstract = button.getAttribute('data-bs-abstract')
+    const authors = button.getAttribute('data-bs-authors')
+    const doi = button.getAttribute('data-bs-doi')
+    const modalTitle = detailsModal.querySelector(".modal-title")
+    const modalAbstract = detailsModal.querySelector('.modal-body p[id="abstract"]')
+    const modalAuthors = detailsModal.querySelector('.modal-body p[id="authors"]')
+    const modalDoi = detailsModal.querySelector('.modal-body p[id="doi"] a')
+    modalTitle.textContent = title
+    modalAbstract.textContent = abstract
+    modalAuthors.textContent = authors
+    modalDoi.href = "http://doi.org/" + doi
+    modalDoi.textContent = doi
+  })
+}
+
+if (bibtexModal) {
+    bibtexModal.addEventListener('show.bs.modal', event => {
+        const button = event.relatedTarget
+        const bibtex = button.getAttribute('data-bs-bibtex')
+        const modalPre = bibtexModal.querySelector('.modal-body pre')
+        modalPre.textContent = bibtex
+    })
+
+    bibtexCopy.addEventListener('click', event => {
+        const button = event.target
+        const modalPre = bibtexModal.querySelector('.modal-body pre')
+        navigator.clipboard.writeText(modalPre.textContent)
+        button.classList.remove('bi-clipboard')
+        button.classList.add('bi-clipboard-check')
+        
+        setTimeout(() => {  
+            button.classList.remove('bi-clipboard-check')
+            button.classList.add('bi-clipboard')
+        }, 3000)
+        
+    })
+}
+
+
+</script>
