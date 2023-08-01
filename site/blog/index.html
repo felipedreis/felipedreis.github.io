@@ -1,0 +1,58 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="container" style="height: 700px;"> 
+    {% for post in paginator.posts %}
+    <div class="row container-md">
+        <div class="col-md-auto">
+            <div class="m-3">
+                {% if post.thumbnail %}
+                <img class="img-tumbnail" src="{{ post.thumbnail }}"/>
+                {% else %}
+                {% include thumbnail.html %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="mx-auto p-4">
+                <h4 class="text-start">
+                <a href="{{ post.url }}"> {{ post.title }} </a>
+                </h4>
+                <p class="mx-auto pt-4 text-start">
+                <em>
+                    {{ post.short_intro }}
+                </em>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row align-items-end pt-3">
+    <div class="col text-end">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">
+            Previous
+        </a>
+        {% else %}
+        <span>Previous</span>
+        {% endif %}
+    </div>
+
+    <div class="col">
+        <span >
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+        </span>
+    </div>
+
+    <div class="col text-start">
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">Next</a>
+        {% else %}
+        <span>Next</span>
+        {% endif %}
+    </div>
+</div>

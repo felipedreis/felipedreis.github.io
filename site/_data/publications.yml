@@ -1,0 +1,217 @@
+- title: "Bar foo is also a valid research example"
+  abstract: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Sed nisi lacus sed viverra tellus in. Magna fermentum iaculis eu non. Egestas tellus rutrum tellus pellentesque eu tincidunt.
+    Mattis pellentesque id nibh tortor id aliquet lectus proin. Nibh venenatis cras sed felis. 
+    Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Bibendum arcu vitae elementum curabitur. 
+    Tempor orci eu lobortis elementum nibh tellus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. 
+    Ultrices gravida dictum fusce ut placerat orci. Tellus molestie nunc non blandit massa. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. 
+    Massa sed elementum tempus egestas sed sed risus pretium. Integer eget aliquet nibh praesent tristique.
+  authors:
+    - Fulano
+    - Beltrano
+    - Ciclano
+  journal: Proceedings of Foo Bar
+  link: https://link.springer.com/chapter/10.1007/978-3-031-23236-7_48
+  file: docs/ol2a2023.pdf
+  thumbnail: images/ol2a2023thumbnail.png
+  year: 2023
+  bibtex: |
+    @inproceedings{reis2022asynchronous,
+      title={Asynchronous and Distributed Multi-agent Systems: An Approach Using Actor Model},
+      author={Reis, Felipe D and Nascimento, Tales B and Marcelino, Carolina G and Wanner, Elizabeth F and Borges, Henrique E and Salcedo-Sanz, Sancho},
+      booktitle={International Conference on Optimization, Learning Algorithms and Applications},
+      pages={701--713},
+      year={2022},
+      organization={Springer}
+    }
+    
+
+- title: "How many foo bars fits in a foo"
+  abstract: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Sed nisi lacus sed viverra tellus in. Magna fermentum iaculis eu non. Egestas tellus rutrum tellus pellentesque eu tincidunt.
+    Mattis pellentesque id nibh tortor id aliquet lectus proin. Nibh venenatis cras sed felis. 
+    Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Bibendum arcu vitae elementum curabitur. 
+    Tempor orci eu lobortis elementum nibh tellus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. 
+    Ultrices gravida dictum fusce ut placerat orci. Tellus molestie nunc non blandit massa. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. 
+    Massa sed elementum tempus egestas sed sed risus pretium. Integer eget aliquet nibh praesent tristique.
+  authors:
+    - Fulano
+    - Beltrano
+    - Ciclano
+  journal: Proceedings of Foo Bar
+  link: https://link.springer.com/chapter/10.1007/978-3-031-23236-7_48
+  file: docs/ol2a2023.pdf
+  thumbnail: images/ol2a2023thumbnail.png
+  year: 2023
+  bibtex: |
+    @inproceedings{reis2022asynchronous,
+      title={Asynchronous and Distributed Multi-agent Systems: An Approach Using Actor Model},
+      author={Reis, Felipe D and Nascimento, Tales B and Marcelino, Carolina G and Wanner, Elizabeth F and Borges, Henrique E and Salcedo-Sanz, Sancho},
+      booktitle={International Conference on Optimization, Learning Algorithms and Applications},
+      pages={701--713},
+      year={2022},
+      organization={Springer}
+    }
+    
+
+- title: "Foo Bar The return"
+  abstract: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Sed nisi lacus sed viverra tellus in. Magna fermentum iaculis eu non. Egestas tellus rutrum tellus pellentesque eu tincidunt.
+    Mattis pellentesque id nibh tortor id aliquet lectus proin. Nibh venenatis cras sed felis. 
+    Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Bibendum arcu vitae elementum curabitur. 
+    Tempor orci eu lobortis elementum nibh tellus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. 
+    Ultrices gravida dictum fusce ut placerat orci. Tellus molestie nunc non blandit massa. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. 
+    Massa sed elementum tempus egestas sed sed risus pretium. Integer eget aliquet nibh praesent tristique.
+  authors:
+    - Fulano
+    - Beltrano
+    - Ciclano
+  journal: Proceedings of Foo Bar
+  link: https://link.springer.com/chapter/10.1007/978-3-031-23236-7_48
+  file: docs/ol2a2023.pdf
+  thumbnail: images/ol2a2023thumbnail.png
+  year: 2023
+  bibtex: |
+    @inproceedings{reis2022asynchronous,
+      title={Asynchronous and Distributed Multi-agent Systems: An Approach Using Actor Model},
+      author={Reis, Felipe D and Nascimento, Tales B and Marcelino, Carolina G and Wanner, Elizabeth F and Borges, Henrique E and Salcedo-Sanz, Sancho},
+      booktitle={International Conference on Optimization, Learning Algorithms and Applications},
+      pages={701--713},
+      year={2022},
+      organization={Springer}
+    }
+    
+
+- title: "Another Foo Bar"
+  abstract: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Sed nisi lacus sed viverra tellus in. Magna fermentum iaculis eu non. Egestas tellus rutrum tellus pellentesque eu tincidunt.
+    Mattis pellentesque id nibh tortor id aliquet lectus proin. Nibh venenatis cras sed felis. 
+    Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Bibendum arcu vitae elementum curabitur. 
+    Tempor orci eu lobortis elementum nibh tellus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. 
+    Ultrices gravida dictum fusce ut placerat orci. Tellus molestie nunc non blandit massa. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. 
+    Massa sed elementum tempus egestas sed sed risus pretium. Integer eget aliquet nibh praesent tristique.
+  authors:
+    - Fulano
+    - Beltrano
+    - Ciclano
+  journal: Proceedings of Foo Bar
+  link: https://link.springer.com/chapter/10.1007/978-3-031-23236-7_48
+  file: docs/ol2a2023.pdf
+  thumbnail: images/ol2a2023thumbnail.png
+  year: 2023
+  bibtex: |
+    @inproceedings{reis2022asynchronous,
+      title={Asynchronous and Distributed Multi-agent Systems: An Approach Using Actor Model},
+      author={Reis, Felipe D and Nascimento, Tales B and Marcelino, Carolina G and Wanner, Elizabeth F and Borges, Henrique E and Salcedo-Sanz, Sancho},
+      booktitle={International Conference on Optimization, Learning Algorithms and Applications},
+      pages={701--713},
+      year={2022},
+      organization={Springer}
+    }
+    
+
+- title: "Foo Bar 2"
+  abstract: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Sed nisi lacus sed viverra tellus in. Magna fermentum iaculis eu non. Egestas tellus rutrum tellus pellentesque eu tincidunt.
+    Mattis pellentesque id nibh tortor id aliquet lectus proin. Nibh venenatis cras sed felis. 
+    Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Bibendum arcu vitae elementum curabitur. 
+    Tempor orci eu lobortis elementum nibh tellus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. 
+    Ultrices gravida dictum fusce ut placerat orci. Tellus molestie nunc non blandit massa. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. 
+    Massa sed elementum tempus egestas sed sed risus pretium. Integer eget aliquet nibh praesent tristique.
+  authors:
+    - Fulano
+    - Beltrano
+    - Ciclano
+  journal: Proceedings of Foo Bar
+  link: https://link.springer.com/chapter/10.1007/978-3-031-23236-7_48
+  file: docs/ol2a2023.pdf
+  thumbnail: images/ol2a2023thumbnail.png
+  year: 2023
+  bibtex: |
+    @inproceedings{reis2022asynchronous,
+      title={Asynchronous and Distributed Multi-agent Systems: An Approach Using Actor Model},
+      author={Reis, Felipe D and Nascimento, Tales B and Marcelino, Carolina G and Wanner, Elizabeth F and Borges, Henrique E and Salcedo-Sanz, Sancho},
+      booktitle={International Conference on Optimization, Learning Algorithms and Applications},
+      pages={701--713},
+      year={2022},
+      organization={Springer}
+    }
+    
+
+- title: "Foo Bar fo bar"
+  abstract: |
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Sed nisi lacus sed viverra tellus in. Magna fermentum iaculis eu non. Egestas tellus rutrum tellus pellentesque eu tincidunt.
+    Mattis pellentesque id nibh tortor id aliquet lectus proin. Nibh venenatis cras sed felis. 
+    Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Bibendum arcu vitae elementum curabitur. 
+    Tempor orci eu lobortis elementum nibh tellus. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. 
+    Ultrices gravida dictum fusce ut placerat orci. Tellus molestie nunc non blandit massa. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. 
+    Massa sed elementum tempus egestas sed sed risus pretium. Integer eget aliquet nibh praesent tristique.
+  authors:
+    - Fulano
+    - Beltrano
+    - Ciclano
+  journal: Proceedings of Foo Bar
+  link: https://link.springer.com/chapter/10.1007/978-3-031-23236-7_48
+  file: docs/ol2a2023.pdf
+  thumbnail: images/ol2a2023thumbnail.png
+  year: 2023
+  bibtex: |
+    @inproceedings{reis2022asynchronous,
+      title={Asynchronous and Distributed Multi-agent Systems: An Approach Using Actor Model},
+      author={Reis, Felipe D and Nascimento, Tales B and Marcelino, Carolina G and Wanner, Elizabeth F and Borges, Henrique E and Salcedo-Sanz, Sancho},
+      booktitle={International Conference on Optimization, Learning Algorithms and Applications},
+      pages={701--713},
+      year={2022},
+      organization={Springer}
+    }
+
+- title: "Asynchronous and Distributed Multi-agent Systems: An Approach Using Actor Model"
+  doi: "10.1007/978-3-031-23236-7_48"
+  abstract: | 
+    Agent-based and individual-based modeling have been widely used to simulate ecological systems. 
+    The historical architectures designed to artificial life simulation, namely LIDA and MicroPsy, 
+    rely into classical concurrence mechanisms based on threads, shared memory and locks. 
+    Although these mechanisms seem to work fine for many multi-agent systems (MAS), 
+    notably for those requiring synchronous communication between agents, 
+    they present severe restrictions in case of complex asynchronous MAS. 
+    In this work, we explore an alternative approach to handle concurrency in distributed asynchronous MAS:
+    the actor model. An actor is a concurrent entity capable of sending, receiving and handling asynchronous messages,
+    and creating new actors. Within this paradigm, there are no shared memory and, hence, no data race conditions.
+    We introduce L2L (a short for: Learn to Live, Live to Learn) architecture, a biological inspired distributed 
+    non-deterministic MAS simulation framework, in which the autonomous agents (creatures) are endowed with a functional and minimal 
+    nervous system model enabling them to learn from its own experiences and interactions with the two-dimensional world, populated with creatures and nutrients.
+    Both creatures and nutrients are encapsulated in actors. The system as a whole performs as a discrete non-deterministic dynamical system, 
+    as well as the creatures themselves. The scalability of this actor-based framework is evaluated showing the system scales up and out many 
+    processes per processor node and in a computer cluster. A second experiment is realized to validate the architecture, 
+    consisting of an open-ended foraging simulation with both one or many creatures and hundreds of nutrients. Results from this specific actor-based 
+    version are compared to those from a classical concurrency version of the same architecture, showing they are equivalent, 
+    despite the fact that the former version scales a lot better. Moreover, results show that exploration of the world is unbiased, 
+    leading us to conjecture that our system follows ergodic hypothesis. 
+    We argue that the actor-based model proves to be very promising to modeling of asynchronous complex MAS.
+  authors:
+    - Felipe D. Reis
+    - Tales B. Nascimento
+    - Carolina G. Marcelino
+    - Elizabeth F. Wanner
+    - Henrique E. Borges
+    - Sancho Salcedo-Sanz
+  journal: International Conference on Optimization, Learning Algorithms and Applications
+  link: https://link.springer.com/chapter/10.1007/978-3-031-23236-7_48
+  file: docs/ol2a2023.pdf
+  thumbnail: images/ol2a2023thumbnail.png
+  year: 2023
+  bibtex: |
+    @inproceedings{reis2022asynchronous,
+      title={Asynchronous and Distributed Multi-agent Systems: An Approach Using Actor Model},
+      author={Reis, Felipe D and Nascimento, Tales B and Marcelino, Carolina G and Wanner, Elizabeth F and Borges, Henrique E and Salcedo-Sanz, Sancho},
+      booktitle={International Conference on Optimization, Learning Algorithms and Applications},
+      pages={701--713},
+      year={2022},
+      organization={Springer}
+    }
