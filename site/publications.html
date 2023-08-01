@@ -10,6 +10,7 @@ permalink: /publications/
                 <div class="card" style="width: 350px; min-height: 550px;"> 
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-light"> {{ paper.year }} </span>
                     <img src="{{ paper.thumbnail | absolute_url }}" class="card-img-top"/>
+                    
                     <div class="card-body">
                         <h5 class="card-title">{{ paper.title }}</h5>
                         <p class="card-text fw-light">
@@ -22,7 +23,9 @@ permalink: /publications/
                                 {{ paper.abstract | truncatewords: 15 }} 
                             </a> 
                         </p>
+
                         <a href="{{ paper.file | absolute_url }}" class="btn btn-dark">Download</a>
+
                         <a href="#" data-bs-toggle="modal"
                             data-bs-bibtex="{{ paper.bibtex }}"
                             data-bs-target="#bibtex" 

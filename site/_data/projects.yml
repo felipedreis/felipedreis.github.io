@@ -1,21 +1,39 @@
 - name: "GTA-SA/MP"
   short: "Simulating distributed traffic management"
-  description: ""
+  description: | 
+    With the growing of the big cities, the advent of self-driving cars and the smart-cities related technology the idea of using 
+    classical intersection management such as semaphores doesn't take any advantage of all technology embedded in vehicles today.
+    This project aims to create a distributed intersection management where cars communicate with a software artifact that manages
+    each intersection, allowing them to cross the intersection without stopping and free of hassle. I participate in this project
+    coordinating undergrad students, leading meetings, defining project priorities, making code reviews and planning experiments. 
   start: 2023
   end: current
+  repo: github.com/diogodeas/CarlaSimulator
+  thumbnail: images/carlathumbnail.png
 - name: "d-optimas"
+  short: Distributed multi-agent system for optimization
   description: |
-        Looking into the populations of insects, birds, mammals, we observe that collaboration is an 
-        important component for adaptation and survival. But if you come closer, this collaboration doesn't
-        happen in a homogeneous environment. Even really simple insects like ants are different from one to another, 
-        and have may have different tasks. No single ant is really good at cutting and carrying, but many ants together 
-        can cut an entire leaf and carry it to the anthill in minutes. The diversity of ants is a strong factor on the population success.
+    Looking into the populations of insects, birds, mammals, we observe that collaboration is an 
+    important component for adaptation and survival. But if you come closer, this collaboration doesn't
+    happen in a homogeneous environment. Even really simple insects like ants are different from one to another, 
+    and have may have different tasks. No single ant is really good at cutting and carrying, but many ants together 
+    can cut an entire leaf and carry it to the anthill in minutes. The diversity of ants is a strong factor on the population success.
+    With that in mind, this project studied the diversity and collaboration of a multi-agent system for combinatorics and non-combinatorics problems. 
+    This project was codded in Java, with Akka and Cassandra. The analysis was made with Python.
   start: 2019
   end: current
   repo: github.com/felipedreis/doptimas
+  thumbnail: images/doptimasthumbnail.png
 - name: "dl2l"
   short: "An aritificial life simulator"
-  description: ""
+  description: | 
+    This project aimed to reproduce a top-down model of an artificial nervous system. In a situated-cognition perspective, 
+    creatures endowed with such a nervous system are capable of naviagate in a virtual world, interact with nutrients, 
+    and learn how to keep it's homeostasis and survive. This project was implemented inside the Artifical Intelligence Lab in 
+    CEFET-MG. I started as a Java Developer early in my tech high-school and carried many features in this project such as 
+    its refactoring to a client-server architecture, data analysis and extraction layer, new control UI, and the port to 
+    the Actor library Akka. 
   start: 2011
   end: 2017
   repo: github.com/felipedreis/dl2l
+  thumbnail: images/dl2lthumbnail.png
