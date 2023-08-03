@@ -1,8 +1,76 @@
 ---
-layout: default
+layout: long
 title: Curriculum
 permalink: /cv/
 ---
-<div>
-    professional experience goes here
+
+{% assign cv = site.data.cv %}
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-2">
+            <h4>Profile</h4>
+        </div>
+        <div class="col-10">
+            {{ cv.profile }}
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-2">
+            <h4>Professional Experience</h4>
+        </div>
+        <div class="col-10">
+            <div>
+                <div>
+                    <h4>{{ cv.jobs.current.company }}</h4>
+                    <h5>{{ cv.jobs.current.start }} - Current</h5>
+                </div>
+                <div>
+                    <p class="lead"> {{ cv.jobs.current.position }} </p>
+                </div>
+                <div>
+                    <p>{{ cv.jobs.current.description }}</p>
+                </div>
+            </div>
+            {% for job in cv.jobs.past %}
+                <hr/>
+                <div>
+                    <div>
+                        <h4>{{ job.company }}</h4>
+                        <h5>{{ job.start }} - {{ job.end }}</h5>
+                    </div>
+                    <div>
+                        <p class="lead"> {{job.position }} </p>
+                    </div>
+                    <div>
+                        <p>{{ job.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-2">
+            <h3>Education</h3>
+        </div>
+        <div class="col-10">
+            {% for edu in cv.education %}
+                <div>
+                    <div>
+                        <h4>{{ edu.institution }}</h4>
+                        <h5>{{ edu.start }} - {{ edu.end }}</h5>
+                    </div>
+                    <div>
+                        <p class="lead"> {{ edu.course }} </p>
+                    </div>
+                    <div>
+                        <p>{{ edu.final_project }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
 </div>

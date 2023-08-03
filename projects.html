@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: long
 title: Projects
 permalink: /projects/
 ---
@@ -8,20 +8,20 @@ permalink: /projects/
     <div class="d-flex justify-content-center flex-wrap"> 
         {% for project in site.data.projects  %}
             <div class="m-3">
-                <div class="card" style="width: 350px; min-height: 350px;"> 
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-light"> {{ paper.year }} </span>
-                    <img src="{{ project.thumbnail | absolute_url }}" class="card-img-top"/>
+                <div class="card" style="width: 350px; min-height: 385px;"> 
+                    <img src="{{ project.thumbnail | absolute_url }}" class="card-img-top" style="height: 200px; object-fit: cover;"/>
                     <div class="card-body">
                         <h5 class="card-title">{{ project.name }}</h5>
                         <div class="card-text fw-light">
                             <p>{{ project.short  }} </p> 
-                            <p>Duration: {{ project.start }} - {{ project.end }} </p>
                         </div>
-
+                    </div>
+                    <div class="mt-auto pb-3">
                         <a href="#" 
                             data-bs-title="{{ project.name }}"
                             data-bs-repo="{{ project.repo }}"
                             data-bs-description="{{ project.description }}"
+                            data-bs-duration="{{ project.start }} - {{ project.end }}"
                             data-bs-toggle="modal"
                             data-bs-target="#details"
                             class="btn btn-dark">Details</a>
@@ -54,12 +54,27 @@ permalink: /projects/
                     </div>
                     <div class="row">
                         <div class="col-2">
+                            <p class="text-end">Duration: </p>
+                        </div>
+                        <div class="col-10">
+                            <em>
+                                <p id="duration" class="text-justify">
+
+                                </p>
+                            </em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
                             <p class="text-end">Repository: </p>
                         </div>
                         <div class="col-10">
                             <em>
-                                <p id="repo" class="text-start">
+                                <p class="text-start">
+                                    <a id="repo" class="text-start">
 
+                                    </a>
                                 </p>
                             </em>
                         </div>
@@ -79,17 +94,19 @@ if (detailsModal) {
     
     const title = button.getAttribute("data-bs-title")
     const description = button.getAttribute('data-bs-description')
+    const duration = button.getAttribute('data-bs-duration')
     const repo = button.getAttribute('data-bs-repo')
     
     const modalTitle = detailsModal.querySelector(".modal-title")
     const modalDescription = detailsModal.querySelector('.modal-body p[id="description"]')
-    const modalRepo = detailsModal.querySelector('.modal-body p[id="repo"]')
+    const modalRepo = detailsModal.querySelector('.modal-body a[id="repo"]')
+    const modalDuration = detailsModal.querySelector('.modal-body p[id="duration"]')
 
     modalTitle.textContent = title
     modalDescription.textContent = description
+    modalRepo.href = "https://" + repo
     modalRepo.textContent = repo
-    modalDoi.href = "http://doi.org/" + doi
-    modalDoi.textContent = doi
+    modalDuration.textContent = duration
   })
 }
 </script>

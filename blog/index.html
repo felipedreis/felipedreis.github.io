@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: long
 title: Blog
 ---
 
-<div class="container" style="height: 700px;"> 
-    {% for post in paginator.posts %}
+<div class="container pt-5"> 
+    {% for post in site.posts %}
     <div class="row container-md">
         <div class="col-md-auto">
             <div class="m-3">
@@ -31,7 +31,7 @@ title: Blog
     {% endfor %}
 </div>
 
-<div class="row align-items-end pt-3">
+<!--div class="row align-items-end pt-3">
     <div class="col text-end">
         {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path }}">
@@ -55,4 +55,4 @@ title: Blog
         <span>Next</span>
         {% endif %}
     </div>
-</div>
+</div-->

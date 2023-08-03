@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: long
 title: Publications
 permalink: /publications/
 ---
@@ -14,22 +14,30 @@ permalink: /publications/
                     <div class="card-body">
                         <h5 class="card-title">{{ paper.title }}</h5>
                         <p class="card-text fw-light">
-                             <a href="#" class="plain-text" data-bs-toggle="modal" 
+                            {{ paper.abstract | truncatewords: 15 }}
+                        </p>
+
+                    </div>
+                    <div class="mb-auto pb-3">
+                        
+                        <a href="#" class="btn btn-dark" data-bs-toggle="modal" 
                                 data-bs-title="{{ paper.title }}"
                                 data-bs-abstract="{{ paper.abstract }}" 
                                 data-bs-doi="{{ paper.doi }}" 
                                 data-bs-authors="{{ paper.authors | array_to_sentence_string }}"
                                 data-bs-target="#details"> 
-                                {{ paper.abstract | truncatewords: 15 }} 
-                            </a> 
-                        </p>
-
-                        <a href="{{ paper.file | absolute_url }}" class="btn btn-dark">Download</a>
+                            Details
+                        </a>
 
                         <a href="#" data-bs-toggle="modal"
                             data-bs-bibtex="{{ paper.bibtex }}"
                             data-bs-target="#bibtex" 
                             class="btn btn-light">Bibtex</a>
+                    
+                        <a href="{{ paper.file | absolute_url }}" class="btn btn-light">
+                            <i class="bi bi-box-arrow-down"></i>
+                        </a>
+                    
                     </div>
                 </div>
             </div>
