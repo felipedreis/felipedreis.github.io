@@ -4,7 +4,17 @@ title: Blog
 ---
 
 <div class="container pt-5"> 
+    {% assign last_year = 0 %}
     {% for post in site.posts %}
+    {% assign year = post.date | date: "%Y" %}
+    
+    {% if year != last_year %}
+    {% assign last_year = year %}
+    <div class="container d-flex flex-row align-items-center">
+        <p class="fw-light my-1 mx-1">{{ year }}</p> <hr class="w-100"/>
+    </div>
+    {% endif %}
+
     <div class="row container-md">
         <div class="col-md-auto">
             <div class="m-3">
@@ -16,43 +26,19 @@ title: Blog
             </div>
         </div>
         <div class="col">
-            <div class="mx-auto p-4">
+            <div class="mx-auto p-3">
                 <h4 class="text-start">
-                <a href="{{ post.url }}"> {{ post.title }} </a>
+                <a href="{{ post.url }}" class="post-link"> {{ post.title }} </a>
                 </h4>
-                <p class="mx-auto pt-4 text-start">
-                <em>
+                <p class="mx-auto pt-3 text-start fw-light">
                     {{ post.short_intro }}
-                </em>
+                </p>
+
+                <p class="text-end fw-lighter">
+                    <em>Written by Felipe on {{ post.date | date_to_string }} </em>
                 </p>
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
-
-<!--div class="row align-items-end pt-3">
-    <div class="col text-end">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}">
-            Previous
-        </a>
-        {% else %}
-        <span>Previous</span>
-        {% endif %}
-    </div>
-
-    <div class="col">
-        <span >
-        Page: {{ paginator.page }} of {{ paginator.total_pages }}
-        </span>
-    </div>
-
-    <div class="col text-start">
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}">Next</a>
-        {% else %}
-        <span>Next</span>
-        {% endif %}
-    </div>
-</div-->

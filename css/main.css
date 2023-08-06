@@ -101,3 +101,12 @@ border-bottom-color: #fff;
 .text-justify {
   text-align: justify;
 }
+
+.post-link {
+  text-decoration: none;
+  color:#333;
+}
+
+.social { 
+  color: #333 !important;
+}
