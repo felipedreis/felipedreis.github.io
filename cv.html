@@ -1,0 +1,123 @@
+---
+layout: long
+title: Curriculum
+permalink: /cv/
+---
+
+{% assign cv = site.data.cv %}
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-2 text-start">
+            <h4>Profile</h4>
+        </div>
+        <div class="col-10 text-justify">
+            <p class="fw-light">{{ cv.profile }}</p>
+        </div>
+    </div>
+    <hr/>
+    <div class="row"> 
+        <div class="col-2 text-start">
+            <h4>
+                Skills
+            </h4>
+        </div>
+        <div class="col-10 d-flex flex-row mr-1">
+            {% for skill in cv.skills %}
+                <div class="text-start text-wrap mx-2">
+                    <h6> {{ skill.title }} </h6>
+                    <p class="fw-light">
+                        {{ skill.details }}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-2 text-start">
+            <h4>Experience</h4>
+        </div>
+        <div class="col-10">
+            <div class="d-flex flex-column">
+                <div class="d-flex flex-row justify-content-between">
+                    <h4>{{ cv.jobs.current.company }}</h4>
+                    <h5>{{ cv.jobs.current.start }} - Current</h5>
+                </div>
+                <div class="text-start">
+                    <p class="lead"> {{ cv.jobs.current.position }} </p>
+                </div>
+                <div class="text-justify">
+                    <p class="fw-light">{{ cv.jobs.current.description }}</p>
+                </div>
+            </div>
+            {% for job in cv.jobs.past %}
+                <hr class="mb-1"/>
+                <div class="d-flex flex-column mb-3">
+                    <div class="d-flex flex-row justify-content-between">
+                        <h4>{{ job.company }}</h4>
+                        <h5>{{ job.start }} - {{ job.end }}</h5>
+                    </div>
+                    <div class="text-start">
+                        <p class="lead"> {{job.position }} </p>
+                    </div>
+                    <div class="text-justify">
+                        <p class="fw-light">{{ job.description }}</p>
+                    </div>
+                    <div class="text-start"> 
+                        <p class="fw-light">
+                            <span class="fw-bold">Tech stack: </span>  {{ job.tech | array_to_sentence_string }}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-2 text-start">
+            <h3>Education</h3>
+        </div>
+        <div class="col-10">
+            {% for edu in cv.education %}
+                <div class="d-flex flex-column mb-3">
+                    <div class="d-flex flex-row justify-content-between">
+                        <h4>{{ edu.institution }}</h4>
+                        <h5>{{ edu.start }} - {{ edu.end }}</h5>
+                    </div>
+                    <div class="text-start">
+                        <p class="lead"> {{ edu.course }} </p>
+                    </div>
+                    {% if edu.final_project %}
+                    <div class="text-start">
+                        <p class="fw-light"> <span class="fw-bold">Final Project: </span>{{ edu.final_project }}</p>
+                    </div>
+                    {% endif %}
+                    <div class="text-start">
+                        {{ edu.details }}
+                    </div>
+                </div>
+                {% unless forloop.last %}
+                <hr class="mb-1"/>
+                {% endunless %}
+            {% endfor %}
+        </div>
+    </div>
+    <hr/>
+    <div class="row"> 
+        <div class="col-2 text-start">
+            <h4>
+                Languages
+            </h4>
+        </div>
+        <div class="col-10 d-flex flex-row justify-content-between">
+            {% for language in cv.languages %}
+                <div class="text-start text-wrap">
+                    <h6>{{ language.title }}</h6>
+                    <p class="fw-light">{{ language.proficience }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr/>
+</div>

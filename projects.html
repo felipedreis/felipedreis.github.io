@@ -1,0 +1,112 @@
+---
+layout: long
+title: Projects
+permalink: /projects/
+---
+
+<div class="container pt-5">
+    <div class="d-flex justify-content-center flex-wrap"> 
+        {% for project in site.data.projects  %}
+            <div class="m-3">
+                <div class="card" style="width: 350px; min-height: 385px;"> 
+                    <img src="{{ project.thumbnail | absolute_url }}" class="card-img-top" style="height: 200px; object-fit: cover;"/>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.name }}</h5>
+                        <div class="card-text fw-light">
+                            <p>{{ project.short  }} </p> 
+                        </div>
+                    </div>
+                    <div class="mt-auto pb-3">
+                        <a href="#" 
+                            data-bs-title="{{ project.name }}"
+                            data-bs-repo="{{ project.repo }}"
+                            data-bs-description="{{ project.description }}"
+                            data-bs-duration="{{ project.start }} - {{ project.end }}"
+                            data-bs-toggle="modal"
+                            data-bs-target="#details"
+                            class="btn btn-dark">Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div id="details" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-2">
+                            <p class="text=end">Description: </p>
+                        </div>
+                        <div class="col-10">
+                            <em>
+                                <p id="description" class="text-justify">
+
+                                </p>
+                            </em>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <p class="text-end">Duration: </p>
+                        </div>
+                        <div class="col-10">
+                            <em>
+                                <p id="duration" class="text-justify">
+
+                                </p>
+                            </em>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <p class="text-end">Repository: </p>
+                        </div>
+                        <div class="col-10">
+                            <em>
+                                <p class="text-start">
+                                    <a id="repo" class="text-start">
+
+                                    </a>
+                                </p>
+                            </em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const detailsModal = document.getElementById('details')
+
+if (detailsModal) {
+  detailsModal.addEventListener('show.bs.modal', event => {
+    const button = event.relatedTarget
+    
+    const title = button.getAttribute("data-bs-title")
+    const description = button.getAttribute('data-bs-description')
+    const duration = button.getAttribute('data-bs-duration')
+    const repo = button.getAttribute('data-bs-repo')
+    
+    const modalTitle = detailsModal.querySelector(".modal-title")
+    const modalDescription = detailsModal.querySelector('.modal-body p[id="description"]')
+    const modalRepo = detailsModal.querySelector('.modal-body a[id="repo"]')
+    const modalDuration = detailsModal.querySelector('.modal-body p[id="duration"]')
+
+    modalTitle.textContent = title
+    modalDescription.textContent = description
+    modalRepo.href = "https://" + repo
+    modalRepo.textContent = repo
+    modalDuration.textContent = duration
+  })
+}
+</script>

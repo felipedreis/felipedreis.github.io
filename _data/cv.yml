@@ -1,0 +1,137 @@
+profile: |
+  I'm a computer engineer with diverse experience, ranging from consolidated banking companies and public institutions
+  to startups and tech companies. I'm keen on themes like distributed systems, multi-agent systems and problem-solving. 
+  I enjoy working in a horizontal environment where I have the responsibility to make decisions, implement and deploy, 
+  having full ownership of my solution. I experimented with technologies like C/C++, Python, Java, relational and non-relational 
+  databases, and popular frameworks like Spring and Akka.
+
+languages:
+  - title: English
+    proficience: Full Working Proficience
+  - title: French
+    proficience: Limited Working Proficience
+  - title: Portuguese
+    proficience: Native 
+
+skills: 
+  - title: Technologies 
+    details: |
+      My main programming language through the last few years is Java, although I have some experience with C/C++, Python and currently
+      learning Golang. I have experience with a variety of databases, message queues and deployment infrastructure. 
+  - title: Problem Solving
+    details: |
+      I participated as competidor and latter as team coach in ICPC regionals from 2014 to 2019. My favorites problem solving topics are
+      dynamic programming and graphs.  
+  - title: Distributed Systems
+    details: |
+      I'm keen on this topic, having started working with it in 2011 inside the multi-agents domain. From the High-Performance Computing Lab
+      to the banking sector, and current research projects in self-driving cars, all my experience is someway connected to distributed software.
+
+jobs:
+  current:
+    company: Five9
+    position: Software Engineer
+    description: ""
+    start: Aug, 2023
+  past:
+    - company: Evernote
+      position: Software Engineer
+      description: | 
+        Worked with the platform team refactoring a sharded-based software to run in a Kubernetes environment. 
+        This involved many distributed systems related problems such as database caching, distributed configuration management, 
+        scheduling, distributed session and load balancing.Worked with the platform team refactoring a sharded-based software to
+        run in a Kubernetes environment. This involved many distributed systems related problems such as database caching, 
+        distributed configuration management, scheduling, distributed session and load balancing.
+      start: Mar, 2022
+      end: Feb, 2023
+      tech: 
+        - Java 
+        - Kubernetes
+        -  MySQL
+    - company: Natixis
+      position: Java Developer
+      description: |
+        Alocated in Natixis by Aubay, I worked with the e-forex team, maintaining the platform for the Spot/Swap/Option Desk.
+      start: May, 2021
+      end: Mar, 2022
+      tech: 
+        - Java
+        - SQLServer
+        - TIBCO Rendezvous
+    - company: Monnos
+      position: Backend Engineer
+      description: |
+        Monnos is a crypto bank with social features. There I implemented the CI/CD pipeline, the news feed microservice, 
+        migrated part of the stack to kubernetes and implemented a monitoring solution using Kibana/Grafana.
+      start: Sep, 2020
+      end: May, 2021
+      tech: 
+        - Java
+        - Kubernetes
+        - Ansible
+        - Gitlab CI 
+    - company: CEFET-MG
+      position: Linux System Administrator
+      description: |
+        As the administrator of High-Performance Computer, associated with the PPGMMC, I installed and configured an ~800 cores 
+        HPC based on Rocks Cluster and SLURM. Gave support to technologies such as MPI, OpenMP, CUDA and Hadoop. Also giving support to users, 
+        helping them to prepare their experiments, compiling and installing software, writing environment modules, and also hardware maintenance. 
+        Beyond that, I was writing technical reports and supervising a team of two interns.
+      start: April, 2016
+      end: May, 2021
+      tech: 
+       - CentOS 
+       - Slurm 
+       - C/C++
+       - Python 
+       - Java 
+       - MPI 
+       - OpenMP 
+       - CUDA 
+       - Shell Scripting
+       - PostgreSQL 
+       - Cassandra  
+       - Linux KVM
+    - company: Centre for Informatics and Systems @ UC 
+      position: Research Assistant 
+      description: |
+        I worked in the SSE (Software and System Engineering) group supervised by the professor Nuno Antunes, 
+        developing a metric system for trustworthiness benchmark in virtualized systems. 
+      start: Mar, 2018
+      end: Aug, 2018
+      tech: 
+        - none 
+    - company: Intelligent Systems Lab @ CEFET-MG
+      position: Junior Research Assistant
+      description: |
+        I worked in a research project that aimed to develop an artificial life simulator, distributed across a cluster. 
+        The project was called L2L (Live to Learn, Learn to Live), in which was possible to create artificial creatures endowed with
+        an artificial nervous system in a virtual world where they could interact and learn to live. 
+        This system was coded in Java 8 using the toolkit Akka with a PostgreSQL database. 
+        The experiments were run in an 8 machine cluster, extracting data of lifetime interaction.
+        We studied the influence of the learning/action selection algorithm in creatures behaviour over time.
+      start: Jan, 2013
+      end: Mar, 2016
+      tech: 
+        - none
+
+education:
+  - institution: CEFET-MG
+    course: Ms.C. in Mathematical Modeling and Computer Science 
+    final_project: Effect of Dynamic Hybridization of Meta-Heuristics on a Distributed and Scalable Multi-Agent System
+    start: Aug, 2019
+    end: Mar, 2022
+  - institution: CEFET-MG
+    course: Bachelor in Computer Engineering
+    final_project: Distributed Multi-Agent System for Foraging Simulation of Artificial Creatures with Nervous System
+    start: Nov, 2012
+    end: Dec, 2017
+    details: |
+      
+  - institution: CEFET-MG
+    course: Technical High School in Industrial Informatics
+    start: 2008
+    end: 2011
+
+github: https://github.com/felipedreis
+linkedin: https://www.linkedin.com/in/felipe-duarte-dos-reis-99801389/

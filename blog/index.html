@@ -1,0 +1,44 @@
+---
+layout: long
+title: Blog
+---
+
+<div class="container pt-5"> 
+    {% assign last_year = 0 %}
+    {% for post in site.posts %}
+    {% assign year = post.date | date: "%Y" %}
+    
+    {% if year != last_year %}
+    {% assign last_year = year %}
+    <div class="container d-flex flex-row align-items-center">
+        <p class="fw-light my-1 mx-1">{{ year }}</p> <hr class="w-100"/>
+    </div>
+    {% endif %}
+
+    <div class="row container-md">
+        <div class="col-md-auto">
+            <div class="m-3">
+                {% if post.thumbnail %}
+                <img class="img-tumbnail" src="{{ post.thumbnail }}"/>
+                {% else %}
+                {% include thumbnail.html %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="mx-auto p-3">
+                <h4 class="text-start">
+                <a href="{{ post.url }}" class="post-link"> {{ post.title }} </a>
+                </h4>
+                <p class="mx-auto pt-3 text-start fw-light">
+                    {{ post.short_intro }}
+                </p>
+
+                <p class="text-end fw-lighter">
+                    <em>Written by Felipe on {{ post.date | date_to_string }} </em>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

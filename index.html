@@ -1,0 +1,24 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+---
+<div class="container">
+    <img class="d-block mx-auto mb-4 me" src="images/me.png"/>
+    <div class="mt-5 pt-5 px-5">
+        <p class="lead">
+            {% assign current_job = site.data.cv.jobs.current %}
+            Hello, my name is <span class="text-dark">Felipe Duarte</span>, 
+                I'm currently living in Porto working as a <span class="class="text-dark"">{{ current_job.position }}</span>
+                    in <span class="text-dark">{{ current_job.company }}</span>.
+        </p>
+        <p class="lead">
+            Here you can find a little bit of my academic and professional experience, the research projects I participated, and texts
+            I write to remember the things I learned along the way.
+        </p>
+        <p class="lead">
+            If you have any questions, feel free to drop me a message in Linkedin.
+        </p>
+    </div>
+</div>
