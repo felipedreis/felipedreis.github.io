@@ -13,3 +13,14 @@ a code artifact and what is how an engine works.
 * an engine is built taking in account the specification for the use, the building 
 materials, etc. If something breaks, it has to be substitute for the most similar 
 piece possible
+
+* most of people believes that databases are independent of business logic and 
+entities. In theory, if you segregate interfaces of databases, you could swap your
+SGBD implementation without worring or touching the business logic
+
+* I can give arguments that goes in the opposite way. Your business requirements
+are strongly connect with your data representation, and swapping the data layer
+without big refactoring is almost impossible
+
+* take for example a sistem that I'm designing for managing bikes for a school. The 
+app accept a student to book one or more bikes
