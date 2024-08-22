@@ -65,6 +65,6 @@ C(2) = 2
 C(3) = 3
 C(4) = 5
 ```
-But this don't solve our problem yet. But if you enumerate the cases, anddraw 
+But this don't solve our problem yet. If you enumerate the cases, anddraw 
 them, you can see similarities between the solutions. In special, for a N=4, 
 I chose two solutions that are prety similar, as you can see in figure
