@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "'Efficient Estimation of Word Representations in Vector Space' Reviewed" 
-date:   2021-11-15 12:00:00 +0100
+date:   2024-08-10 12:00:00 +0100
 categories: blog research llms 
 short_intro: "review of word2vec first paper"
 highlights:
