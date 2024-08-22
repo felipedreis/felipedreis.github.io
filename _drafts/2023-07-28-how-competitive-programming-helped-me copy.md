@@ -8,6 +8,7 @@ short_intro: |
   going through the frustration of layoff and helped my to find a job I wanted
 ---
 
+
 This moment arrived to me. I see many collegues reacting to layoff posts and 
 suddenly its my turn. For me, even with my leadership encouraging me to keep 
 motivated with work, the layoff was kind of obvious after the BendingSpoons acquisition
