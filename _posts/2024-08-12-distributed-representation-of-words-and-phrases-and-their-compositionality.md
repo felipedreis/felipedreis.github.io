@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "A Multi-Agent System for Optimization Based on Actors"
-date:   2021-11-15 12:00:00 +0100
-categories: blog research doptimas 
-short_intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa."
+title:  "'Distributed Representation of words and phrases and their compositionality' Reviewed"
+date:   2024-08-12 12:00:00 +0100
+categories: blog research llms
+short_intro: ""
 highlights:
     - Highlight number 1
     - Highlight number 2
