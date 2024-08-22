@@ -1,7 +1,14 @@
 ---
-title: Efficient Estimation of Word Representations in Vector Space 
+layout: post
+title: Efficient Estimation of Word Representations in Vector Space Reviewed 
+date:   2021-11-15 12:00:00 +0100
+categories: blog research doptimas 
+short_intro: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa."
+highlights:
+    - Highlight number 1
+    - Highlight number 2
+    - Highlight number 3
 ---
-
 Based in a simple neural network with one hidden layer, the authors can 
 expand the dimensions of vector representations for words, also called 
 embbeddings. 
