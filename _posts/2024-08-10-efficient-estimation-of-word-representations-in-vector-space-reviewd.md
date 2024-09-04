@@ -21,17 +21,17 @@ that was the state of the art at that time, the authors could train bigger
 architectures in higher order vectorial spaces with larger datasets. The 
 training schema also produces a set of vector that preserves linear properties, 
 in a meaningful sense. For example, adding the vectors 
-$vec("Berlin") - vec("Germany") + vec("France")$ results in a vector which its
-close neighbor is $vec("Paris")$.
+\\(vec("Berlin") - vec("Germany") + vec("France")\\)  results in a vector which its
+close neighbor is \\(vec("Paris")\\).
 
 The higher-order vectorial spaces encondes semantical and syntatical information,
 as well as socio-political-cultural knowledge such as presidents, countries' 
 capitals, etc.
 
 This similarities/relationships can be measured using cossine distance. Given
-two words A and B, their respective vectors $a$ and $b$, we can calculate
+two words A and B, their respective vectors \\(a\\) and \\(b\\), we can calculate
 the cossine of the angle between two vectors with the formula:
 
-$\cos(\theta) = \frac{a \cdot b}{\| a \| \| b \|}$
+$$ \cos(\theta) = \frac{a \cdot b}{\| a \| \| b \|} $$
 
 We say both vectors are similar if their cosine distance is close to 1. 
