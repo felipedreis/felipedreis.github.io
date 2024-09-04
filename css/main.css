@@ -105,6 +105,10 @@ border-bottom-color: #fff;
   text-align: justify;
 }
 
+.post p {
+  text-align: start;
+}
+
 .post-link {
   text-decoration: none;
   color:#333;
