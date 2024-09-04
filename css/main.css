@@ -97,6 +97,9 @@ border-bottom-color: #fff;
   color: #333;
   text-decoration: none;
 }
+.post p {
+  text-align: start
+} 
 
 .text-justify {
   text-align: justify;
