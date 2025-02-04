@@ -1,8 +1,20 @@
+- name: "IPC-Bikes"
+  short: "Bike booking system for International People's College"
+  description: | 
+    I developed this project with my friend Lucas, who was in a career change process from Mechanical Engineering to IT. I was helping him
+    when a friend at IPC approached me with a real-life problem: tracking who has this shared bike. At IPC they tried everything,
+    from paper forms to Excel sheets. All they needed was a beautiful interface, and Lucas nailed it. I boilerplate the project's backend,
+    using that to teach him the basics of backend development, relational models, security, and authentication. I also did the reviews for the 
+    software architecture solutions proposed by Lucas and reviewed the frontend MR.
+  start: 2023
+  end: 2025
+  repo: https://github.com/garcialucasm/ipc-bike-app
+  thumbnail: images/ipcbikes.png
 - name: "GTA-SA/MP"
   short: "Simulating distributed traffic management"
   description: | 
-    With the growing of the big cities, the advent of self-driving cars and the smart-cities related technology the idea of using 
-    classical intersection management such as semaphores doesn't take any advantage of all technology embedded in vehicles today.
+    With the growth of the big cities, the advent of self-driving cars and smart-cities-related technology the idea of using 
+    classical intersection management such as semaphores doesn't take any advantage of all the technology embedded in vehicles today.
     This project aims to create a distributed intersection management where cars communicate with a software artifact that manages
     each intersection, allowing them to cross the intersection without stopping and free of hassle. I participate in this project
     coordinating undergrad students, leading meetings, defining project priorities, making code reviews and planning experiments. 
