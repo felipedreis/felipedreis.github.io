@@ -4,8 +4,6 @@ title: "'Sailor: Automating Distributed Training over Dynamic, Heterogeneous, an
 date:   2025-05-04 12:00:00 +0100
 categories: blog 
 short_intro: ""
-highlights:
-    - 
 ---
 
 This paper introduces Sailor, a workload planner and scheduler for machine learning
