@@ -1,0 +1,51 @@
+---
+layout: default
+title: Talks
+---
+
+<div class="container pt-5"> 
+    {% assign last_year = 0 %}
+    {% for talk in site.data.talks %}
+    
+    {% assign video_id = "" %}
+    {% if talk.url contains "watch?v=" %}
+        {% assign video_id_parts = talk.url | split: "watch?v=" %}
+        {% assign video_id = video_id_parts[1] | split: "&" | first %}
+    {% elsif talk.youtube_url contains "youtu.be/" %}
+        {% assign video_id_parts = talk.url | split: "youtu.be/" %}
+        {% assign video_id = video_id_parts[1] | split: "?" | first %}
+    {% endif %}
+
+    {% assign year = talk.date %}
+    
+    {% if year != last_year %}
+    {% assign last_year = year %}
+    <div class="container d-flex flex-row align-items-center">
+        <p class="fw-light my-1 mx-1">{{ year }}</p> <hr class="w-100"/>
+    </div>
+    {% endif %}
+    
+    <div class="row container-md">
+        <div class="col-md-4">
+            <div class="m-3">
+                {% if video_id != "" %}
+                    {% assign thumbnail_url = "https://img.youtube.com/vi/" | append: video_id | append: "/0.jpg" %}
+                    <img class="img-fluid rounded shadow-sm" src="{{ thumbnail_url }}"/>
+                {% else %}
+                    {% include thumbnail.html %}
+                {% endif %}
+            </div>
+        </div>
+        <div class="col">
+            <div class="mx-auto p-3">
+                <h4 class="text-start">
+                <a href="{{ talk.url }}" class="post-link"> {{ talk.title }} </a>
+                </h4>
+                <p class="mx-auto pt-3 text-start fw-light">
+                    {{ talk.short_intro }}
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

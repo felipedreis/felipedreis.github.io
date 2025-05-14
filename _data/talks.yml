@@ -1,0 +1,72 @@
+
+- url: https://www.youtube.com/watch?v=l0Y9RUlbytI
+  title: Unpacking ChatGPT
+  short_intro: | 
+    In the first part of this video, I, a Brazilian software engineer, break
+    down the fascinating world of ChatGPT. I'll explain the neural networks that
+    power it, how words are transformed into vectors to understand meaning, and
+    the architecture behind models like ChatGPT. We'll also touch upon the
+    concept of Artificial General Intelligence (AGI), discuss the power
+    consumption and potential dangers of these powerful AI tools, and consider
+    how they are becoming increasingly integrated into our daily lives.
+  date: 2024
+
+- url: https://www.youtube.com/watch?v=nyhqpyGHMnw
+  title: Coisas Que a Programação Competitiva me Ensinou
+  short_intro: | 
+    In this video, I explore how my experiences in competitive programming, 
+    alongside insights from my friend Rodrigo, have been instrumental in 
+    navigating the tech industry. I'll share key lessons learned from tackling 
+    tough coding challenges and how this background translates to real-world 
+    career success, including during job interviews and beyond.
+  date: 2023
+  language: Portuguese
+
+- url: https://www.youtube.com/watch?v=OuWqJ-88hqw
+  title: |
+    Defesa de Mestrado - Efeito da Hibridização Dinâmica de
+    Meta-Heuristicas em Um Sistema Multiagentes Distribuído e Escalável 
+  short_intro: |
+    In this presentation, which is my dissertation defense, I delve into the
+    dynamic hybridization of metaheuristics within a multi-agent distributed
+    system. I'll walk you through the architecture I developed, explaining how
+    agents and regions interact to solve complex optimization problems. You'll
+    see the experiments I conducted to evaluate the system's scalability and the
+    impact of diverse search strategies on solution quality. Finally, I'll share
+    my conclusions and thoughts on future research in this exciting field.
+  date: 2022
+
+- url: https://www.youtube.com/watch?v=5fYI03bChuo
+  title: Do Pão de Queijo ao Pastel de Nata 
+  short_intro: |
+    Join me as I recount my academic and professional journey, from my early 
+    tech curiosity in Brazil to my current work in Portugal. I'll share the 
+    challenges I faced, the transformative power of programming marathons,
+    my experiences studying abroad, and the path that led me to roles at 
+    companies like Uber and now Evernote. It's a story about perseverance, 
+    the importance of practical experience, continuous learning, and chasing your dreams.
+  date: 2022
+
+- url: https://www.youtube.com/watch?v=t9sxay56SAo 
+  title: Avaliação da Latência em um Sistema Multiagentes Distribuído 
+  short_intro: | 
+    In this video, I explain how I evaluated latency in a distributed
+    multi-agent system, which was a key part of my master's work. I'll use an
+    analogy of sending letters to help you understand message exchange and then
+    dive into the architecture of the system I built, where agents search for
+    solutions to optimization problems and regions store these solutions. I'll
+    share my findings on how the system's performance, specifically message
+    latency, changes as we vary the number of nodes, and discuss what this means
+    for computational resources and scalability.
+  date: 2020
+
+- url: https://www.youtube.com/watch?v=U3TqvZsuwbA
+  title: O Cluster do CEFET-MG e Como Utilizar os Seus Recursos  
+  short_intro: |
+    In this video, I dive into the world of high-performance computing using 
+    clusters, explaining complex parallel processing concepts with a fun pizza 
+    analogy! I'll give you a tour of the CEFET cluster, including its hardware 
+    and software, and show you how to access and utilize its resources. 
+    We'll also explore different parallelism strategies, tools, 
+    and languages like Julia, designed to get the most out of powerful computing environments.
+  date: 2019
