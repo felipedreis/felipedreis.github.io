@@ -29,9 +29,9 @@ Dynamic Programming search strategy with space prunning.
 
 The experiment evaluated three aspects of the system: 
 
-    1. The quality of simulator estimations to memory and iteration time
-    2. Benchmarked the planner against homogeneous and heterogeneous planners available in the literature
-    3. Evaluated how factors such as cluster size, heterogenity and constrainsts affects search time 
+- The quality of simulator estimations to memory and iteration 
+- Benchmarked the planner against homogeneous and heterogeneous planners available in the literature
+- Evaluated how factors such as cluster size, heterogenity and constrainsts affects search time 
 
 The system is evaluated against the planners Piper, AMP, 
 Varauna, Aceso in the homogeneus configuration and the planners Metis and

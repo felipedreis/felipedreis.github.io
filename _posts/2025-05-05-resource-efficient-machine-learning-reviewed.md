@@ -9,10 +9,10 @@ short_intro: ""
 The document resumes the discussions from the Dagsthul Seminar 24311. It happened
 in 4 working groups: 
  
-    1. Resource-Efficient Data Selection;
-    2. The Future of Portable, Extensible and Composable Machine Learning Systems
-    3. Hardware-Software Co-Design for Machine Learning 
-    4. Workload-Aware Machine Learning Serving 
+- Resource-Efficient Data Selection;
+- The Future of Portable, Extensible and Composable Machine Learning Systems
+- Hardware-Software Co-Design for Machine Learning 
+- Workload-Aware Machine Learning Serving 
 
 Regarding the topic 4, it highlights that model personalization, fine tunning and 
 prompt engineering is a growing trend, while weight prunning and saprsity exploitation
@@ -29,7 +29,7 @@ configurations to maximize throughput subject to accuracy, energy and latency co
 
 The methodology proposed encompass:
 
-    1. share a workload characterization of real serving traces, the potential of sparsification and oportunities of adaption.
-    2. Develop a reconfiguration system with an optimization method, tuning hyperparameters and objectives
-    3. Conduct preliminar experiments on two different prototypes for LLMs and traditional ML models 
+- Share a workload characterization of real serving traces, the potential of sparsification and oportunities of adaption.
+- Develop a reconfiguration system with an optimization method, tuning hyperparameters and objectives
+- Conduct preliminar experiments on two different prototypes for LLMs and traditional ML models 
 
