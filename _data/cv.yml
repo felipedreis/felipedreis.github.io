@@ -31,8 +31,26 @@ jobs:
   current:
     company: Five9
     position: Software Engineer
-    description: ""
+    description: |
+      I joined Five9 in the Outbound team. We were modernizing the outbound campaign
+      list management funcionality to the cloud while maintaining and evolving 
+      the Java 8 monolitic application we had. I fixed several bugs in the 
+      monolith, related to the sorting and ordering criteria of campaigns.
+      I contributed to the design, implementation and testing of end time to call 
+      funcionality. 
+      I also worked on the observability of the monolith in the cloud, designing 
+      and implementing the telemetry writer service that was listening to pubsub
+      messages in OpenTelemetry standard and writing it to respective BigQuery tables
+      to be consumed by Grafana.
+      In  Feb 2025 I did a horizontal move to Five9's AI Team to speed up the delivery of 
+      Automated Quality Management. I contributed to the design of major features 
+      such as the form storage, evaluation engine and storage/analysis of agent performance metrics. 
     start: Aug, 2023
+    tech:
+      - Java
+      - Spring 
+      - Google Cloud Platform
+      - Elasticsearch 
   past:
     - company: Evernote
       position: Software Engineer

@@ -6,7 +6,7 @@ categories: blog
 short_intro: ""
 ---
 
-Training large language models is a computation intensive task and require 
+Training large language models is a computation intensive task and requires 
 parallelization for obtaining results in a reasonable time. 
 There are different parallelization techniques such as data parallelism, tensor 
 parallelization and pipeline parallelization.
@@ -14,20 +14,21 @@ Data Parallelism is when the same model is trained with different subsets of the
 Pipeline Parallelism splits the layers over different servers, and Tensor 
 Parallelism splits the tensors over different GPUs.
 
-Although the naive usage of such techniques can result in poor training performance 
+Although, the naive usage of such techniques can result in poor training performance 
 That said, the authors want to address the question on how to combine parallelization 
 techniques to maximize throughput given a batch size without impact on training convergence. 
 
-Authors propose an interleaved pipeline schedule that reduces the pipeline bubble. 
-This method increase communication, but the authors propose an optimization that mitigate 
-the impact of extra communication.
-They also propose an heuristic approach to calculate the microbatch size 
+The paper proposes an interleaved pipeline schedule that reduces the pipeline bubble.
+This method increase communication, which is performance critical. But the authors 
+propose an optimization that mitigate the impact of extra communication.
+They also propose an heuristic approach to calculate the microbatch size.
 Their model outperforms ZeRO-3 in some cases by 70% (175 and 530 billion parameters).
 
-Authors offers a training schedule that is abble to train 1 trillion parameter 
-model in 3 months. Their approach is the first to combine effectively combine 
+A relevant contribution of this paper is the  training schedule offered
+that is abble to train 1 trillion parameter model in 3 months. 
+Their approach is the first to combine effectively combine 
 pipeline and tensor parallelism to train such large model. They also provide a 
-few guidelines to combine parallelization techniques and calculate hyperparameters 
+few guidelines to combine parallelization techniques and calculate hyperparameters.
 
 Although the paper results are strong, they are very limited to the tested model
 and hardware (strong dependency of same intercontects and gpus to get similar performance).

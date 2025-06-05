@@ -50,6 +50,11 @@ permalink: /cv/
                 <div class="text-justify">
                     <p class="fw-light">{{ cv.jobs.current.description }}</p>
                 </div>
+                <div class="text-start"> 
+                    <p class="fw-light">
+                        <span class="fw-bold">Tech stack: </span>  {{ cv.jobs.current.tech | array_to_sentence_string }}
+                    </p>
+                </div>
             </div>
             {% for job in cv.jobs.past %}
                 <hr class="mb-1"/>
