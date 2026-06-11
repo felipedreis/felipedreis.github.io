@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(dirname "$0")"
+bundle check >/dev/null 2>&1 || bundle install
+exec bundle exec jekyll serve --drafts --livereload "$@"

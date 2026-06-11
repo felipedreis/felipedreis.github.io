@@ -4,28 +4,25 @@ title: Projects
 permalink: /projects/
 ---
 
-<div class="container pt-5">
-    <div class="d-flex justify-content-center flex-wrap"> 
+<div class="page-container">
+    <h1 class="page-title">Projects</h1>
+    <div class="card-grid">
         {% for project in site.data.projects  %}
-            <div class="m-3">
-                <div class="card" style="width: 350px; min-height: 385px;"> 
-                    <img src="{{ project.thumbnail | absolute_url }}" class="card-img-top" style="height: 200px; object-fit: cover;"/>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ project.name }}</h5>
-                        <div class="card-text fw-light">
-                            <p>{{ project.short  }} </p> 
-                        </div>
-                    </div>
-                    <div class="mt-auto pb-3">
-                        <a href="#" 
-                            data-bs-title="{{ project.name }}"
-                            data-bs-repo="{{ project.repo }}"
-                            data-bs-description="{{ project.description }}"
-                            data-bs-duration="{{ project.start }} - {{ project.end }}"
-                            data-bs-toggle="modal"
-                            data-bs-target="#details"
-                            class="btn btn-dark">Details</a>
-                    </div>
+            <div class="card site-card">
+                <img src="{{ project.thumbnail | absolute_url }}" class="card-img-top site-card-img"/>
+                <div class="card-body">
+                    <h3 class="site-card-title">{{ project.name }}</h3>
+                    <p class="site-card-text">{{ project.short }}</p>
+                </div>
+                <div class="site-card-actions">
+                    <a href="#"
+                        data-bs-title="{{ project.name }}"
+                        data-bs-repo="{{ project.repo }}"
+                        data-bs-description="{{ project.description }}"
+                        data-bs-duration="{{ project.start }} - {{ project.end }}"
+                        data-bs-toggle="modal"
+                        data-bs-target="#details"
+                        class="btn site-btn site-btn-primary">Details</a>
                 </div>
             </div>
         {% endfor %}
