@@ -1,0 +1,143 @@
+% =========================================================================
+% LaTeX CV Template for Felipe Duarte dos Reis
+% =========================================================================
+% Delimiter scheme: Jinja2-compatible using double parentheses:
+%   Variables: (( variable_name ))
+%   Blocks:    ((% block_statement %))
+%   Comments:  ((# comment_text #))
+% This scheme is chosen to prevent syntax collisions with standard LaTeX {}.
+%
+% How to use with LLMs:
+% Provide the LLM with:
+% 1. This template file (cv_template.tex)
+% 2. The raw data from _data/cv.yml
+% 3. The Job/Position Description
+% Instruct the LLM to output the completed LaTeX document tailored to the JD.
+% =========================================================================
+
+\documentclass[11pt, letterpaper]{article}
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}       % Times New Roman font (Ivy League standard)
+\usepackage[margin=0.75in]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+
+% --- LINK FORMATTING ---
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black, % Keep it black for printing/classic look
+    pdftitle={(( name | default("Felipe Duarte dos Reis") )) - Resume},
+}
+
+% --- SECTION FORMATTING ---
+\titleformat{\section}{\large\bfseries\uppercase}{}{0pt}{}[\vspace{-8pt}\rule{\textwidth}{0.5pt}\vspace{-4pt}]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% --- LIST FORMATTING ---
+\setlist[itemize]{leftmargin=0.15in, label={--}, itemsep=1pt, topsep=2pt}
+
+% --- CUSTOM COMMANDS ---
+\newcommand{\resumeItem}[1]{\item \small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{3pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+% --- Remove page numbers ---
+\pagestyle{empty}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\LARGE \textbf{(( name | default("Felipe Duarte dos Reis") ))}} \\ \vspace{4pt}
+    (( title | default("Software Engineer") )) \\
+    \small 
+    (( github | default("github.com/felipedreis") )) $|$ 
+    (( linkedin | default("linkedin.com/in/felipe-duarte-dos-reis-99801389") )) $|$
+    (( email | default("felipeduartedreis@gmail.com") )) $|$
+    (( phone | default("+351 910499319") ))\\
+    \small \faMapMarker \space (( location | default("Porto, Portugal") ))
+\end{center}
+
+% --- SUMMARY ---
+\section{Professional Summary}
+\vspace{2pt}
+\small{(( professional_summary ))}
+
+% --- SKILLS ---
+\section{Technical Skills}
+\vspace{2pt}
+\small{
+\textbf{Languages:} (( skills.languages )) \\
+\textbf{Algorithms \& Applied Math:} (( skills.algorithms )) \\
+\textbf{System Design \& Architecture:} (( skills.architecture )) \\
+\textbf{Infrastructure:} (( skills.infrastructure ))
+}
+
+% --- EXPERIENCE ---
+\section{Professional Experience}
+\begin{itemize}[leftmargin=0in, label={}]
+
+    ((% for job in jobs %))
+    \resumeSubheading
+      {(( job.company ))}{(( job.period ))}
+      {(( job.position ))}{(( job.location ))}
+      \begin{itemize}
+        ((% for bullet in job.bullets %))
+        \resumeItem{(( bullet ))}
+        ((% endfor %))
+      \end{itemize}
+    ((% endfor %))
+
+\end{itemize}
+
+% --- INDEPENDENT PROJECTS ---
+\section{Engineering Projects}
+\begin{itemize}[leftmargin=0in, label={}]
+    ((% for project in projects %))
+    \resumeSubheading
+      {(( project.name ))}{(( project.date ))}
+      {(( project.tech ))}{}
+      \begin{itemize}
+        ((% for bullet in project.bullets %))
+        \resumeItem{(( bullet ))}
+        ((% endfor %))
+      \end{itemize}
+    ((% endfor %))
+\end{itemize}
+
+% --- EDUCATION ---
+\section{Education}
+\begin{itemize}[leftmargin=0in, label={}]
+    ((% for edu in education %))
+    \resumeSubheading
+      {(( edu.institution ))}{(( edu.period ))}
+      {(( edu.degree ))}{}
+      \begin{itemize}
+        ((% for bullet in edu.bullets %))
+        \resumeItem{(( bullet ))}
+        ((% endfor %))
+      \end{itemize}
+    ((% endfor %))
+\end{itemize}
+
+% --- PUBLICATIONS ---
+\section{Publications}
+\vspace{2pt}
+\small{
+((% for pub in publications %))
+\textbf{(( pub.title ))} \\
+(( pub.authors )). \textit{(( pub.venue ))}, (( pub.year )). DOI: (( pub.doi ))((% if not loop.last %)) \\ \vspace{4pt} ((% endif %))
+((% endfor %))
+}
+
+\end{document}
