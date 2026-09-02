@@ -45,7 +45,9 @@ permalink: /cv/
                 <div class="d-flex flex-column mb-3">
                     <div class="d-flex flex-row justify-content-between">
                         <h4>{{ job.company }}</h4>
+                        {% if job.roles.size == 1 %}
                         <h5>{{ company_start }} - {{ company_end }}</h5>
+                        {% endif %}
                     </div>
                     {% for role in job.roles %}
                         <div class="{% unless forloop.first %}mt-3{% endunless %}">

@@ -128,7 +128,8 @@ jobs:
         start: Mar, 2018
         end: Aug, 2018
         tech:
-          - none
+          - C/C++
+          - Xen 
   - company: Intelligent Systems Lab @ CEFET-MG
     roles:
       - position: Junior Research Assistant
@@ -142,7 +143,10 @@ jobs:
         start: Jan, 2013
         end: Mar, 2016
         tech:
-          - none
+          - Java
+          - Akka 
+          - PostgreSQL
+          - Python
 
 education:
   - institution: CEFET-MG

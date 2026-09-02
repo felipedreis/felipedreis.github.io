@@ -40,7 +40,11 @@
 \BLOCK{ for job in cv.jobs }
 \BLOCK{ set company_end = job.roles[0].end | default('Current', true) }
 \begin{minipage}[t]{\linewidth}
+\BLOCK{ if job.roles|length > 1 }
+\noindent\textbf{\large \VAR{ job.company | tex }}\\[0.15em]
+\BLOCK{ else }
 \noindent\textbf{\large \VAR{ job.company | tex }} \hfill \textit{\VAR{ job.roles[-1].start | tex } -- \VAR{ company_end | tex }}\\[0.15em]
+\BLOCK{ endif }
 \BLOCK{ for role in job.roles }
 \BLOCK{ if job.roles|length > 1 }
 \textit{\VAR{ role.position | tex }} \hfill \VAR{ role.start | tex } -- \VAR{ role.end | default('Current', true) | tex }\\
@@ -49,6 +53,7 @@
 \BLOCK{ endif }
 \VAR{ role.description | texpar }
 \BLOCK{ if role.tech }
+\\[0.3em]
 \textbf{Tech stack:} \VAR{ role.tech | join(', ') | tex }
 \BLOCK{ endif }
 \BLOCK{ if not loop.last }
