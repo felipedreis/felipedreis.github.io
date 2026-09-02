@@ -6,3 +6,7 @@ _site
 vendor
 Gemfile
 Gemfile.lock
+
+# cv-builder generated output (regenerate with cv-builder/build_cv.py)
+cv-builder/output/
+cv-builder/.venv/

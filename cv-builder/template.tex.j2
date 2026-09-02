@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+
+% Kept deliberately plain: standard article class, no fancy custom class,
+% single column, no graphics/tables for layout. This keeps the compiled PDF's
+% text extraction (pdftotext, ATS parsers, LLMs reading the PDF) faithful to
+% the source, while the .tex source itself stays easy for a human to skim.
+
+\usepackage[margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.1em}{0.5em}
+
+\hypersetup{pdftitle={\VAR{ cv.name | tex } - CV}, pdfauthor={\VAR{ cv.name | tex }}}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{\VAR{ cv.name | tex }}}\\[0.3em]
+  \href{\VAR{ cv.github }}{GitHub} \quad $\cdot$ \quad \href{\VAR{ cv.linkedin }}{LinkedIn}
+\end{center}
+
+\section*{Profile}
+\VAR{ cv.profile | texpar }
+
+\section*{Skills}
+\begin{itemize}[leftmargin=1.2em, itemsep=0.2em]
+\BLOCK{ for skill in cv.skills }
+  \item \textbf{\VAR{ skill.title | tex }:} \VAR{ skill.details | tex }
+\BLOCK{ endfor }
+\end{itemize}
+
+\section*{Experience}
+\BLOCK{ for job in cv.jobs }
+\BLOCK{ set company_end = job.roles[0].end | default('Current', true) }
+\begin{minipage}[t]{\linewidth}
+\BLOCK{ if job.roles|length > 1 }
+\noindent\textbf{\large \VAR{ job.company | tex }}\\[0.15em]
+\BLOCK{ else }
+\noindent\textbf{\large \VAR{ job.company | tex }} \hfill \textit{\VAR{ job.roles[-1].start | tex } -- \VAR{ company_end | tex }}\\[0.15em]
+\BLOCK{ endif }
+\BLOCK{ for role in job.roles }
+\BLOCK{ if job.roles|length > 1 }
+\textit{\VAR{ role.position | tex }} \hfill \VAR{ role.start | tex } -- \VAR{ role.end | default('Current', true) | tex }\\
+\BLOCK{ else }
+\textit{\VAR{ role.position | tex }}\\
+\BLOCK{ endif }
+\VAR{ role.description | texpar }
+\BLOCK{ if role.tech }
+\\[0.3em]
+\textbf{Tech stack:} \VAR{ role.tech | join(', ') | tex }
+\BLOCK{ endif }
+\BLOCK{ if not loop.last }
+\vspace{0.5em}
+
+\BLOCK{ endif }
+\BLOCK{ endfor }
+\end{minipage}
+\vspace{0.8em}
+
+\BLOCK{ endfor }
+
+\section*{Education}
+\BLOCK{ for edu in cv.education }
+\begin{minipage}[t]{\linewidth}
+\noindent\textbf{\VAR{ edu.institution | tex }} \hfill \textit{\VAR{ edu.start | tex } -- \VAR{ edu.end | tex }}\\
+\textit{\VAR{ edu.course | tex }}\\
+\BLOCK{ if edu.final_project }
+\textbf{Final Project:} \VAR{ edu.final_project | tex }\\
+\BLOCK{ endif }
+\BLOCK{ if edu.details and edu.details.strip() }
+\VAR{ edu.details | texpar }
+\BLOCK{ endif }
+\end{minipage}
+\vspace{0.6em}
+
+\BLOCK{ endfor }
+
+\section*{Languages}
+\BLOCK{ for lang in cv.languages }
+\textbf{\VAR{ lang.title | tex }:} \VAR{ lang.proficience | tex }\BLOCK{ if not loop.last } \quad $\cdot$ \quad \BLOCK{ endif }
+\BLOCK{ endfor }
+
+\end{document}

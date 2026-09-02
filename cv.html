@@ -39,42 +39,40 @@ permalink: /cv/
             <h4>Experience</h4>
         </div>
         <div class="col-10">
-            <div class="d-flex flex-column">
-                <div class="d-flex flex-row justify-content-between">
-                    <h4>{{ cv.jobs.current.company }}</h4>
-                    <h5>{{ cv.jobs.current.start }} - Current</h5>
-                </div>
-                <div class="text-start">
-                    <p class="lead"> {{ cv.jobs.current.position }} </p>
-                </div>
-                <div class="text-justify">
-                    <p class="fw-light">{{ cv.jobs.current.description }}</p>
-                </div>
-                <div class="text-start"> 
-                    <p class="fw-light">
-                        <span class="fw-bold">Tech stack: </span>  {{ cv.jobs.current.tech | array_to_sentence_string }}
-                    </p>
-                </div>
-            </div>
-            {% for job in cv.jobs.past %}
-                <hr class="mb-1"/>
+            {% for job in cv.jobs %}
+                {% assign company_end = job.roles.first.end | default: "Current" %}
+                {% assign company_start = job.roles.last.start %}
                 <div class="d-flex flex-column mb-3">
                     <div class="d-flex flex-row justify-content-between">
                         <h4>{{ job.company }}</h4>
-                        <h5>{{ job.start }} - {{ job.end }}</h5>
+                        {% if job.roles.size == 1 %}
+                        <h5>{{ company_start }} - {{ company_end }}</h5>
+                        {% endif %}
                     </div>
-                    <div class="text-start">
-                        <p class="lead"> {{job.position }} </p>
-                    </div>
-                    <div class="text-justify">
-                        <p class="fw-light">{{ job.description }}</p>
-                    </div>
-                    <div class="text-start"> 
-                        <p class="fw-light">
-                            <span class="fw-bold">Tech stack: </span>  {{ job.tech | array_to_sentence_string }}
-                        </p>
-                    </div>
+                    {% for role in job.roles %}
+                        <div class="{% unless forloop.first %}mt-3{% endunless %}">
+                            <div class="d-flex flex-row justify-content-between">
+                                <p class="lead mb-0"> {{ role.position }} </p>
+                                {% if job.roles.size > 1 %}
+                                <p class="fw-light mb-0"> {{ role.start }} - {{ role.end | default: "Current" }} </p>
+                                {% endif %}
+                            </div>
+                            <div class="text-justify">
+                                <p class="fw-light">{{ role.description }}</p>
+                            </div>
+                            {% if role.tech %}
+                            <div class="text-start">
+                                <p class="fw-light">
+                                    <span class="fw-bold">Tech stack: </span>  {{ role.tech | array_to_sentence_string }}
+                                </p>
+                            </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
                 </div>
+                {% unless forloop.last %}
+                <hr class="mb-1"/>
+                {% endunless %}
             {% endfor %}
         </div>
     </div>
