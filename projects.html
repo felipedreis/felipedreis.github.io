@@ -8,7 +8,7 @@ permalink: /projects/
     <h1 class="page-title">Projects</h1>
     <div class="card-grid">
         {% for project in site.data.projects  %}
-            <div class="card site-card">
+            <div class="card site-card" id="{{ project.name | slugify }}">
                 <img src="{{ project.thumbnail | absolute_url }}" class="card-img-top site-card-img"/>
                 <div class="card-body">
                     <h3 class="site-card-title">{{ project.name }}</h3>
@@ -105,5 +105,16 @@ if (detailsModal) {
     modalRepo.textContent = repo
     modalDuration.textContent = duration
   })
+
+  // deep link: /projects/#dl2l scrolls to the card and opens its details modal
+  const openFromHash = () => {
+    const id = decodeURIComponent(location.hash.slice(1))
+    if (!id) return
+    const card = document.getElementById(id)
+    const button = card && card.querySelector('[data-bs-toggle="modal"]')
+    if (button) bootstrap.Modal.getOrCreateInstance(detailsModal).show(button)
+  }
+  window.addEventListener('load', openFromHash)
+  window.addEventListener('hashchange', openFromHash)
 }
 </script>

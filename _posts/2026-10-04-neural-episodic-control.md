@@ -5,6 +5,12 @@ date:   2026-10-04 12:00:00 +0100
 categories: blog research episodic-memory
 short_intro: "review of neural episodic control"
 highlights:
+    - This paper extends the Episodic Control mechanism with a differentiable
+        dictionary, that allows it to fast update keys, while learning an input
+        representation through neural network
+    - It was compared with MFEC and DQN in the Atari benchmark and achieved 
+        faster training with less samples
+    
 ---
 
 

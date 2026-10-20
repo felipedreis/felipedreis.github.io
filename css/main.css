@@ -581,3 +581,20 @@
   .post-content { font-size: 1.13rem; line-height: 1.7; }
   .post-subtitle { font-size: 1.1rem; }
 }
+
+/* interactive (iframe) figures, e.g. Plotly 3D plots */
+.post-content .post-figure-embed {
+  width: min(1100px, calc(100vw - 2.5rem));
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-x: auto;
+  margin-bottom: 0.65rem;
+}
+
+.post-content .post-figure-embed iframe {
+  width: 100%;
+  min-width: 760px;
+  height: 100%;
+  border: 0;
+}
